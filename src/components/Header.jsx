@@ -17,9 +17,9 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600">
+            {!isMenuOpen && <span className="text-2xl font-bold text-blue-600">
               Logistics Hub
-            </span>
+            </span>}
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -53,7 +53,7 @@ const Header = () => {
           </button>
         </div>
 
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-64' : 'max-h-0'}`}>
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'w-full' : 'max-h-0'}`}>
           <div className="space-y-3 pb-4">
             {navigation.map((item) => (
               <Link
@@ -66,14 +66,6 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="block w-full text-center bg-blue-600 text-white px-6 py-2 
-                rounded-full font-medium hover:bg-blue-700 transition-all"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Get Started
-            </Link>
           </div>
         </div>
       </nav>
