@@ -28,6 +28,7 @@ The project is structured as follows:
 
 -   **React**:  A JavaScript library for building user interfaces.
 -   **React Router**: Used for handling navigation and routing within the app.
+-    **React Helmet**: Used for managing HTML head elements for better SEO.
 -   **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 -   **Flowbite**: A UI library that provides pre-built components styled with Tailwind CSS.
 -   **Vite**: A build tool that provides a fast development experience.
